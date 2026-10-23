@@ -1,0 +1,48 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:PixelPicker.App.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="420"
+        Height="550"
+        MinWidth="380"
+        MinHeight="450"
+        WindowStartupLocation="CenterScreen"
+        x:Class="PixelPicker.App.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="PixelPicker — Color Picker">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <StackPanel
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center"
+    Spacing="12">
+
+    <!-- Nombre de nuestra aplicación -->
+    <TextBlock
+        Text="PixelPicker"
+        FontSize="28"
+        FontWeight="Bold"
+        HorizontalAlignment="Center" />
+
+    <!-- Descripción -->
+    <TextBlock
+        Text="Your colors, your creativity."
+        FontSize="14"
+        HorizontalAlignment="Center" />
+
+    <!-- Botón inicial -->
+    <Button
+        Content="Pick Color"
+        HorizontalAlignment="Center" />
+
+</StackPanel>
+
+</Window>
